@@ -18,6 +18,10 @@ Download script
 
 ```
 pip install requests
+pip install re
+pip install json
+pip install requests
+
 ```
 
 Run the script
