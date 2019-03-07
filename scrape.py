@@ -28,7 +28,7 @@ while True:
 			for paste in scrape_json:
 				#Creating the details for the text file
 				#variables
-				filename = datetime.utcfromtimestamp(float(paste['date'])).strftime('%Y-%m-%d %H-%M-%S') + "_" + paste['key'] + ".txt"
+				filename = datetime.utcfromtimestamp(float(paste['date'])).strftime('%Y-%m-%d_%H-%M-%S') + "_" + paste['key'] + ".txt"
 				date =  datetime.utcfromtimestamp(float(paste['date'])).strftime('%Y-%m-%d')
 				
 				#Create the folder if not exists
