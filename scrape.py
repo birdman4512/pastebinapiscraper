@@ -33,7 +33,13 @@ while True:
                 hour = datetime.utcfromtimestamp(float(paste['date'])).strftime('%H')
                 
                 #Create the folder if not exists
-                if not os.path.isdir(dest_folder + "/" + date + "/" + hour):
+                if not os.path.isdir(dest_folder + "/" + date + "/"):
+                    print("Creating folder: " + date + "/")
+                    os.mkdir(dest_folder + "/" + date + "/")
+                
+                #Create the hour folder
+                #Create the folder if not exists
+                if not os.path.isdir(dest_folder + "/" + date + "/" + hour + "/"):
                     print("Creating folder: " + date + "/" + hour)
                     os.mkdir(dest_folder + "/" + date + "/" + hour + "/")
 
@@ -69,3 +75,4 @@ while True:
     
     #Wait the minimum amount of time
     time.sleep(2)
+
